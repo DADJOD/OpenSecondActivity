@@ -32,8 +32,5 @@ class MainActivity : AppCompatActivity() {
         data = input.text.toString().trim()
         intent.putExtra(MyService.SERVICE_DATA_EXTRA, data)
         startService(intent)
-        startService(intent)
-        startService(intent)
-        startService(intent)
     }
 }

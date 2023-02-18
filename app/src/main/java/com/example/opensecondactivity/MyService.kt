@@ -41,7 +41,7 @@ class MyService : Service() {
             doSomething()
         }
 
-        handler.postDelayed(myRunnable, 5000)
+        handler.postDelayed(myRunnable, 1000)
     }
 
     override fun onDestroy() {
@@ -49,7 +49,7 @@ class MyService : Service() {
 
         Log.d("happySDK", "MyService onDestroy")
 
-        handler.removeCallbacksAndMessages(null)   // stops the queue of handler
+//        handler.removeCallbacksAndMessages(null)   // stops the queue of handler
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -60,6 +60,7 @@ class MyService : Service() {
         }
 
         return START_STICKY // return service if it is deleted in memory
+//        return super.onStartCommand(intent, flags, startId)
     }
 
     @SuppressLint("MissingPermission", "WrongConstant", "UnspecifiedImmutableFlag")
