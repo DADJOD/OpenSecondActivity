@@ -24,10 +24,6 @@ class MyService : Service() {
         super.onCreate()
         Log.d("happySDK", "MyService onCreate")
 
-        kotlin.run {
-            Log.d("happySDK", "my run kotlin.run")
-        }
-
         doSomething()
     }
 
@@ -41,7 +37,7 @@ class MyService : Service() {
             doSomething()
         }
 
-        handler.postDelayed(myRunnable, 1000)
+        handler.postDelayed(myRunnable, 10000)
     }
 
     override fun onDestroy() {
